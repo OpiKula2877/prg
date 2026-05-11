@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.pozadi {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border: 2px solid rgb(0, 95, 178);
+}
+
+body{
+    background-image: url('bc.png');
+    background-size: cover;     /* obrázek pokryje celou stránku */
+    background-repeat: no-repeat; /* nebude se opakovat */
+    background-position: center; /* vycentruje ho */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;     
+    min-height: 100vh; 
+}
+
+.divik {
+    display: grid; 
+    grid-template-columns: repeat(10, 1fr);
+    gap: 5px; 
+    width: 400px; 
+    height: 400px;
+    border: 2px solid #003fab;
+    padding: 5px;
+}
+
+.divik div {
+    background-color: #76a8ff;
+}
+
+h1 {
+    width: 410px;
+    text-align: center;
+    color: #003fab;
+}
+span {
+    color: red;
+}
+
+hr {
+    width: 410px;
+    margin-left: 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-top: 2px solid #003fab;
+}
+
+h3 {
+    color: #003fab;
+    margin-left: 5px;
+}
+.banner {
+    background-color: blue;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px, 20px;
+}

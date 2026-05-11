@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        <script>
+            let a = 0; // První číslo (F0)
+            let b = 1; // Druhé číslo (F1)
+
+            console.log(a); // Vypíšeme začátek
+
+            for (let i = 0; b <= 100; i++) {
+                console.log(b);
+                
+                let next = a + b; // Vzoreček: součet dvou předchozích
+                a = b;            // Posuneme a na místo b
+                b = next;         // Posuneme b na výsledek součtu
+            }
+        </script>
+    </h1>
+    <h4>Já se jmenuji Samuel Pelc</h4>
+</body>
+</html>

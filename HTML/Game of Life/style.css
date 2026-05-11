@@ -1,0 +1,160 @@
+/* 
+   HRA ŽIVOTA - Styly
+   CSS určuje, jak naše aplikace vypadá.
+   Používáme moderní techniky jako CSS Variables a Flexbox/Grid.
+*/
+
+/* --- 1. PROMĚNNÉ (VARIABLES) --- */
+:root {
+    /* Definujeme si barvy na jednom místě. Když budeme chtít změnit motiv,
+       stačí přepsat tyto hodnoty a změní se to všude. */
+    --bg-color: #0f172a;        /* Tmavě modré pozadí stránky */
+    --grid-bg: #1e293b;         /* Pozadí mřížky */
+    --cell-dead: #334155;       /* Barva mrtvé buňky (šedá) */
+    --cell-alive: #4ade80;      /* Barva živé buňky (neonově zelená) */
+    
+    /* Neonový efekt pro živé buňky (záře) */
+    --cell-alive-glow: 0 0 10px #4ade80, 0 0 20px #4ade80;
+    
+    --text-color: #f8fafc;      /* Barva textu */
+    --primary-color: #3b82f6;   /* Hlavní barva tlačítka (modrá) */
+    --primary-hover: #2563eb;   /* Barva tlačítka po najetí myší */
+    --secondary-color: #64748b; /* Vedlejší tlačítko (šedé) */
+    --secondary-hover: #475569;
+}
+
+/* --- 2. ZÁKLADNÍ NASTAVENÍ --- */
+
+/* Reset: Odstraníme výchozí mezery prohlížeče, aby vše sedělo přesně. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif; /* Náš moderní font */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh; /* Roztáhneme body na celou výšku okna */
+    
+    /* Flexbox nám pomůže vycentrovat celou hru doprostřed obrazovky */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Obal celé aplikace */
+.app-container {
+    display: flex;
+    flex-direction: column; /* Prvky pod sebou (Hlavička, Mřížka, Patička) */
+    align-items: center;    /* Zarovnat na střed */
+    gap: 2rem;              /* Mezera mezi sekcemi */
+    padding: 2rem;
+}
+
+/* --- 3. TYPOGRAFIE A TLAČÍTKA --- */
+
+header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    /* Trik pro gradientní text (přechod barev na písmu) */
+    background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Styl tlačítek */
+.btn {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 9999px; /* Pill shape (kulaté hrany) */
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer; /* Změní kurzor na ručičku */
+    transition: all 0.2s ease; /* Plynulá animace při najetí */
+}
+
+/* Efekt stisknutí tlačítka */
+.btn:active {
+    transform: translateY(1px); /* Tlačítko se "promáčkne" o 1 pixel dolů */
+}
+
+/* Varianty tlačítek */
+.btn.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.5); /* Záře při najetí */
+}
+
+.btn.secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn.secondary:hover {
+    background-color: var(--secondary-hover);
+}
+
+/* --- 4. HERNÍ MŘÍŽKA --- */
+
+#game-container {
+    padding: 10px;
+    background: var(--grid-bg);
+    border-radius: 12px;
+    /* Jemný stín pod celou deskou */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+#grid {
+    display: grid; /* Zapneme mřížkový režim */
+    /* Magie: Vytvoří 32 sloupců a 32 řádků o stejné velikosti */
+    grid-template-columns: repeat(32, 1fr);
+    grid-template-rows: repeat(32, 1fr);
+    gap: 1px; /* Mezírka mřížky (vytváří čáry mezi buňkami) */
+    width: fit-content;
+}
+
+.cell {
+    width: 15px;
+    height: 15px;
+    background-color: var(--cell-dead);
+    transition: background-color 0.1s ease; /* Plynulé rozsvícení */
+    cursor: pointer;
+}
+
+/* Když najedeme myší na buňku, trochu ji zesvětlíme */
+.cell:hover {
+    background-color: #475569;
+}
+
+/* .cell.alive znamená element, který má třídu 'cell' A ZÁROVEŇ 'alive' */
+.cell.alive {
+    background-color: var(--cell-alive);
+    box-shadow: var(--cell-alive-glow); /* Neonový efekt */
+    z-index: 1; /* Aby záře byla vidět nad sousedními mrtvými buňkami */
+}
+
+footer {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}

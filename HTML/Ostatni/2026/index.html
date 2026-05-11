@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence receptů</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Evidence receptů</h1>
+<div class="all">
+    <h2>Navigace:</h2>
+        <nav>
+            <ul>
+                <li><a href="#recipes-header">Recepty</a></li>
+                <li><a href="#add-recipes-header">Přidat recept</a></li>
+            </ul>
+        </nav>
+    <main>
+        <section>
+            <h2 id="recipes-header">Recepty:</h2>
+            <div class="recipes">
+                <div class="card">
+                    <h3 class="name-of-food"> Svíčková </h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-fill diff1"></div>
+                    </div>
+                    <p>Obtížnost: <strong>Snadné</strong></p>
+                    <button aria-label="Zobrazit ingredience pro Svíčkovou">Ingredience</button>
+                </div>
+                <div class="card">
+                    <h3 class="name-of-food"> Koprovka </h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-fill diff2"></div>
+                    </div>
+                    <p>Obtížnost: <strong>Střední</strong></p>
+                    <button aria-label="Zobrazit ingredience pro Koprovku">Ingredience</button>
+                </div>
+                <div class="card">
+                    <h3 class="name-of-food"> Kuř. Stripsy </h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-fill diff3"></div>
+                    </div>
+                    <p>Obtížnost: <strong>Težké</strong></p>
+                    <button aria-label="Zobrazit ingredience pro Kuř. Stripsy">Ingredience</button>
+                </div>
+            </div>
+        </section>
+            <div class="form"></div>
+            <section>
+                <h2 id="add-recipes-header">Přidat nový recept:</h2>
+                <form>
+                    <label for="name">Zadej jméno receptu:</label>
+                    <input type="text" id="name" name="name" required maxlength="15" minlength="3" class="name-input">
+                    <br>
+                    <label for="difficulty">Zadejte dobu přípravy:</label>
+                    <input type="number" name="time" id="time" required min="1" max="9999" class="num-input" > <span>min.</span>
+                    <br>
+                    <input type="submit" value="Přidat recept" class="submit">
+                </form>
+            </div>
+        </section>
+</div>
+</main>
+</body>
+</html>

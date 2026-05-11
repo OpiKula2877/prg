@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(73, 73, 73);
+}
+
+.odstavec {
+    margin: 15px;
+    border: 4px dashed #ff0000;
+    padding: 10px;
+    color: #770000;
+}
+
+.odstavec2 {
+    border-radius: 5px;
+    background: linear-gradient(45deg, #15ff00, yellow, #ff0000);
+    border: 20px, red solid;
+    padding: 5px, 50px;
+    border-bottom-style: dashed;
+    margin: 10px 10px 50px 10px;
+    border-top-width: 10px;
+    border-radius: 20px 20px 0 0;
+    padding-left: 50px;
+    padding-right: 50px;
+}

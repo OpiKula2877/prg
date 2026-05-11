@@ -1,0 +1,49 @@
+* {
+    /* Font textu */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Pozadí */
+    background-color: rgb(255, 182, 182);
+}
+
+h2 {
+    /* Dekorace textu, podržení apod. */
+    text-decoration: underline;
+}
+
+li {
+    /* Barva textu */
+    color: #995757;
+}
+
+p {
+    /* odstazení všech p o 50px */
+    margin-top: 50px;
+}
+
+
+svg {
+    /* Výška */
+    width: 50px;
+}
+
+/* margin odsazení elementu od ostatních prvků */
+/* padding odsazení obsahu elementu */
+
+/* Element P */
+p
+
+/* Element P a A */
+p, a
+
+/* Přímý potomek */
+p > a
+
+/* specifikování elementu div */
+div 
+
+/* specifikování classy .nigger */
+.nigger
+
+/* specifikování id .nigger */
+#nigger

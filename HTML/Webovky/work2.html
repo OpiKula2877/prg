@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System</title>
+  <style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    background-color: rgb(28, 13, 24);
+    height: 100vh;
+    overflow: hidden;
+  }
+  .Sun {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(239, 211, 54);
+    box-shadow: 0 0 100px rgb(239, 211, 54);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .Mercur {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(-45deg, rgb(171, 4, 4), black 60%);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+  }
+  .Mercury-orbit {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: 50% 50%;
+    animation: orbit 10s linear infinite;
+    border: 1px dashed rgba(255,255,255,0.1);
+  }
+  @keyframes orbit {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="Sun"></div>
+  <div class="Mercury-orbit">
+    <div class="Mercur"></div>
+  </div>
+</body>
+</html>

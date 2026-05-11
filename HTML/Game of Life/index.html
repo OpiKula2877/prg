@@ -1,0 +1,58 @@
+<!-- 
+    HRA ŽIVOTA - Struktura stránky 
+    Toto je "kostra" naší aplikace. HTML definuje, co na stránce JE.
+    Vzhled řeší CSS a chování řeší JavaScript.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Viewport meta tag zajišťuje, že se stránka zobrazí správně i na mobilech -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life</title>
+
+    <!-- Zde propojujeme náš CSS soubor se styly -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Načítáme hezký font 'Outfit' z Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Hlavní obal aplikace pro lepší centrování a kontrolu rozložení -->
+    <div class="app-container">
+
+        <!-- Hlavička s názvem a tlačítky -->
+        <header>
+            <h1>Game of Life</h1>
+
+            <div class="controls">
+                <!-- Tlačítka pro ovládání hry. ID 'start-btn' používáme v JavaScriptu. -->
+                <button id="start-btn" class="btn primary">Start</button>
+                <button id="reset-btn" class="btn secondary">Reset</button>
+            </div>
+        </header>
+
+        <!-- Hlavní obsah - zde bude naše hra -->
+        <main id="game-container">
+            <!-- 
+                Tohle je jen prázdný kontejner pro mřížku. 
+                Nemáme tu ručně napsaných 1024 divů. 
+                Ty se vygenerují automaticky pomocí JavaScriptu (funkce createGrid).
+            -->
+            <div id="grid"></div>
+        </main>
+
+        <!-- Patička s počítadlem generací -->
+        <footer>
+            <p>Generation: <span id="generation-count">0</span></p>
+        </footer>
+    </div>
+
+    <!-- Načtení logiky hry. Musí být až na konci body, 
+         abychom měli jistotu, že HTML prvky (jako #grid) už existují. -->
+    <script src="javascript.js"></script>
+</body>
+
+</html>

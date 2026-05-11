@@ -1,0 +1,113 @@
+html {
+    background-color: rgb(253, 239, 221);
+}
+
+
+.progress-bar-container {
+    width: 100%;
+    height: 20px;
+    background-color: #e7e7e7ab;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background-color: #4caf50;
+}
+
+.diff1 {
+    width: 33.33%;
+    background-color: #4caf50; 
+}
+
+.diff2 {
+    width: 66.66%;
+    background-color: #ffad33; 
+}
+
+.diff3 {
+    width: 100%;
+    background-color: #ff4d4d; 
+}
+
+.recipes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+h2 {
+    margin-block-end: 0.2em;
+}
+
+.recipes > div {
+    background-color: #c5ffc7;
+    padding: 8px;
+    border: 1px solid #004d17;
+}
+
+.name-of-food {
+    font-size: 1.6em;
+    margin-block-start: 0.3em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    background-color: #c5ffc7;
+    border: #004d17 1px solid;
+    padding: 2px;
+}
+li + li {
+    margin-top: 10px;
+}
+
+input {
+    background-color: #c5ffc7;
+    border: #007c25 1px solid;;
+    color: #004d17;
+}
+button {
+    background-color: #c5ffc7;
+}
+
+.all {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.all nav {
+    align-self: flex-start;
+    text-align: left;
+}
+
+.all .recipes {
+    justify-content: center;
+}
+
+form {
+    margin-bottom: 1rem;
+}
+
+input {
+    margin-top: 5px;
+}
+
+.card:hover , .submit:hover {
+    scale: 1.05;
+    box-shadow: black 0px 0px 5px;
+}
+
+.name-input , .num-input {
+    border-radius: 50px;
+    padding: 1px 5px;
+}
+
+.submit {
+    background-color:;
+}

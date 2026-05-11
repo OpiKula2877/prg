@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Formulář s inputy</h1>
+    <form>
+      <fieldset>
+        <legend>Přihlašovací údaje</legend>
+        <label
+          >E-mail: <input type="email" name="eml" value="@" required
+        /></label>
+        
+
+        <label
+          >Heslo:
+          <input type="password" name="pas" placeholder="Ax*2r45Cvv_" required
+        /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Osobní informace</legend>
+        <label
+          >Rok:
+          <input
+            type="number"
+            name="year"
+            min="1970"
+            max="2025"
+            step="1"
+            placeholder="2009"
+            required
+        /></label>
+        
+
+        <label>Datum: <input type="date" name="date" /></label>
+        
+
+        <label>Barva: <input type="color" name="barva" /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Místo narození</legend>
+        <label
+          >EU: <input type="radio" name="place" value="eu" checked
+        /></label>
+        
+
+        <label>US: <input type="radio" name="place" value="us" /></label>
+        
+
+        <label>Jinde: <input type="radio" name="place" value="other" /></label>
+      </fieldset>
+      <fieldset>
+        <legend>Oblíbené předměty</legend>
+        <label
+          >MAT: <input type="checkbox" name="fav_subject" value="mat" />
+        </label>
+        
+
+        <label
+          >WEB: <input type="checkbox" name="fav_subject" value="mat" checked
+        /></label>
+        
+
+        <label
+          >POS: <input type="checkbox" name="fav_subject" value="pos" checked
+        /></label>
+      </fieldset>
+      <input type="submit" value="Odeslat" />
+      <input type="reset" value="Vyčistit" />
+    </form>
+  </body>
+</html>
+ 

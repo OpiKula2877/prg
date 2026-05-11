@@ -1,0 +1,70 @@
+<h1>A Button with an SVG Icon</h1>
+
+<p>The following buttons are examples on how to make a button fully accessible.</p>
+
+<h2>An inaccessible Button – Bad Example</h2>
+
+<p>The first example shows an <em>inaccessible</em> button and should <strong>not be used</strong>! The button misses any textual explanation on what it is going to do on activation and the icon alone is not helpful for people without sight and also for those, who will not recognize its meaning.</p>
+
+<button type="button">
+    <svg viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
+         height="10"
+         width="10"
+         role="img"
+         class="svg-icon"
+         focusable="false">
+        <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z"/>
+    </svg>
+</button>
+
+<h2>An accessible Button – Good Example</h2>
+
+<p>Here we provide non-sighted users with a textual explanation in form of a title text inside the SVG. This text will be available to assistive technology and in Firefox, users with sight can hover over the button to see a tooltip with the text inside.</p>
+
+<button type="button">
+    <svg class="svg-icon"
+         height="10"
+         width="10"
+         viewBox="0 0 10 10"
+         aria-labelledby="button-label"
+         focusable="false">
+        <title id="button-label">Menu</title>
+        <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z"/>
+    </svg>
+</button>
+
+<h2>An accessible Button – Good Example</h2>
+
+<p>In this example we moved the text from the SVG to a visually hidden span element inside the button. This will also be available to assistive technology, just like above, and invisible to sighted users.</p>
+
+<button type="button">
+    <svg class="svg-icon"
+         role="img"
+         height="10"
+         width="10"
+         viewBox="0 0 10 10"
+         aria-hidden="true"
+         focusable="false">
+        <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z"/>
+    </svg>
+    <span class="visually-hidden">
+        Menu
+    </span>
+</button>
+
+<h2>An accessible Button – Ideal Example</h2>
+
+<p>In this last example the text is not only accessible to assistive technology but also displayed next to the icon. Thereby we ensure that sighted users not being able to recognize the icon to understand the purpose of the button.</p>
+
+<button type="button">
+    Menu
+    <svg class="svg-icon"
+         role="img"
+         height="10"
+         width="10"
+         viewBox="0 0 10 10"
+         aria-hidden="true"
+         focusable="false">
+        <path d="m1 7h8v2h-8zm0-3h8v2h-8zm0-3h8v2h-8z"/>
+    </svg>
+</button>

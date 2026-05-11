@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Moje Flask Aplikace</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cislo {
+            font-size: 50px;
+            color: blue;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .reset-btn {
+            background-color: #ff4444;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Počítadlo</h1>
+    <div class="cislo">{{ cislo }}</div>
+
+    <hr>
+
+    <form action="/plus_jedna" method="post" style="display: inline;">
+        <button type="submit">➕ Přidat 1</button>
+    </form>
+
+    <form action="/reset" method="post" style="display: inline;">
+        <button type="submit" class="reset-btn">🔄 Vynulovat</button>
+    </form>
+
+</body>
+
+</html>

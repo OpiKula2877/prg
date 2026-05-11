@@ -1,0 +1,33 @@
+body {
+    color: white;
+    background-color: rgb(6, 214, 156);
+}
+
+h1 {
+    color: black;
+    background-color: red;
+}
+button {
+    cursor : pointer;
+}
+
+#grid {
+    margin-top: 20px;
+    display: grid;
+    gap: 10px;
+    row-gap: 0px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+}
+
+.cell.white {
+    background-color: #ffffff;
+}
+
+.cell.black {
+    background-color: #000000;
+}

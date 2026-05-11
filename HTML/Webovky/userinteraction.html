@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formuláře</h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username">
+    </form>
+
+    <form>
+        <label>
+            E-mail:
+            <input type="email" name="email" value="@" >
+        </label>
+    </form>
+
+    <form>
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+    </form>
+
+    <form>
+        <label for="birthdate">Birthdate:</label>
+        <input type="date" name="birthdate" id="birthdate">
+
+    <form>
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" min="0" max="120" step="1" value="18">
+    
+    <form>
+
+    </form>
+    <fieldset>
+        <legend>Sex:</legend>
+        <label>Male: <input type="radio" name="sex" value="male" /></label>
+        <br>
+        <label>Female: <input type="checkbox" name="sex" value="female" /></label>
+    </fieldset>
+    <form>
+        <label>
+            Submit:
+            <input type="submit" value="Submit">
+        </label>
+    </form>
+</body>
+</html>
